@@ -73,3 +73,8 @@ D:\MobirollerCase\Mobiroller\Mobiroller.API\obj\Debug\net6.0\refint\Mobiroller.A
 D:\MobirollerCase\Mobiroller\Mobiroller.API\obj\Debug\net6.0\Mobiroller.API.pdb
 D:\MobirollerCase\Mobiroller\Mobiroller.API\obj\Debug\net6.0\Mobiroller.API.genruntimeconfig.cache
 D:\MobirollerCase\Mobiroller\Mobiroller.API\obj\Debug\net6.0\ref\Mobiroller.API.dll
+D:\MobirollerCase\Mobiroller\Mobiroller.API\bin\Debug\net6.0\AutoMapper.dll
+D:\MobirollerCase\Mobiroller\Mobiroller.API\bin\Debug\net6.0\FluentValidation.dll
+D:\MobirollerCase\Mobiroller\Mobiroller.API\bin\Debug\net6.0\FluentValidation.AspNetCore.dll
+D:\MobirollerCase\Mobiroller\Mobiroller.API\bin\Debug\net6.0\FluentValidation.DependencyInjectionExtensions.dll
+D:\MobirollerCase\Mobiroller\Mobiroller.API\bin\Debug\net6.0\Microsoft.AspNetCore.Authentication.OpenIdConnect.dll

@@ -1,10 +1,29 @@
+using FluentValidation.AspNetCore;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
+using Mobiroller.Core.Configuration;
 using Mobiroller.Core.Models;
+using Mobiroller.Core.Repository;
+using Mobiroller.Core.Services;
+using Mobiroller.Core.UnitOfWork;
 using Mobiroller.Data;
+using Mobiroller.Data.Repositories;
+using Mobiroller.Service.Services;
+using SharedLibrary.Configurations;
+using SharedLibrary.Extensions;
+using SharedLibrary.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
+
+builder.Services.AddScoped<IAuthenticationService, AuthenticationService>();
+builder.Services.AddScoped<IUserService, UserService>();
+builder.Services.AddScoped<ITokenService, TokenService>();
+builder.Services.AddScoped(typeof(IGenericRepository<>), typeof(GenericRepository<>));
+builder.Services.AddScoped(typeof(IServiceGeneric<,>), typeof(ServiceGeneric<,>));
+
+builder.Services.AddScoped<IUnitOfWork, UnitOfWork>();
 // Add services to the container.
 
 builder.Services.AddControllers();
@@ -19,6 +38,47 @@ builder.Services.AddDbContext<AppDbContext>(options =>
     });
 });
 builder.Services.AddIdentity<AppUser,AppRole>().AddEntityFrameworkStores<AppDbContext>().AddDefaultTokenProviders();
+builder.Services.AddIdentity<AppUser, IdentityRole>(opt =>
+{
+    opt.User.RequireUniqueEmail = true;
+    opt.Password.RequireNonAlphanumeric = false;
+}).AddEntityFrameworkStores<AppDbContext>().AddDefaultTokenProviders();
+
+builder.Services.Configure<CustomTokenOption>(builder.Configuration.GetSection("TokenOption"));
+builder.Services.Configure<List<Client>>(builder.Configuration.GetSection("Clients"));
+
+
+builder.Services.AddAuthentication(options =>
+{
+    options.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
+    options.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
+}).AddJwtBearer(JwtBearerDefaults.AuthenticationScheme, opts =>
+{
+    var tokenOption = builder.Configuration.GetSection("TokenOption").Get<CustomTokenOption>();
+    opts.TokenValidationParameters = new Microsoft.IdentityModel.Tokens.TokenValidationParameters()
+    {
+        ValidIssuer = tokenOption.Issuer,
+        ValidAudience = tokenOption.Audience[0],
+        IssuerSigningKey = SignService.GetSymmetricSecurityKey(tokenOption.SecurityKey),
+
+        ValidateIssuerSigningKey = true,
+        ValidateAudience = true,
+        ValidateIssuer = true,
+        ValidateLifetime = true,
+        ClockSkew = TimeSpan.Zero
+    };
+});
+
+
+// Add services to the container.
+
+builder.Services.AddControllers().AddFluentValidation(options =>
+{
+    options.RegisterValidatorsFromAssemblyContaining<Program>();
+});
+
+builder.Services.UseCustomValidationResponse();
+
 var app = builder.Build();
 
 

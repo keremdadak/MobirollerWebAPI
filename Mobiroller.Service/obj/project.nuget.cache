@@ -1,14 +1,15 @@
 {
   "version": 2,
-  "dgSpecHash": "SccySqWrwwNdsaWYs7pVzUN8av3LfZG9D0+NtWXVRI3ybH9cuG9GwmR+ckrxVVZCLlL1HFCbnbrVWvydWJtryg==",
+  "dgSpecHash": "67AlrbSv5UEQS/Gzx5/NEC2NnfYmeNb8o+OelSvrScAS8pETA4VNtmPBtTWY86E4MtmSVD06esQXj35g4XK/4w==",
   "success": true,
   "projectFilePath": "D:\\MobirollerCase\\Mobiroller\\Mobiroller.Service\\Mobiroller.Service.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\dadak\\.nuget\\packages\\automapper\\11.0.1\\automapper.11.0.1.nupkg.sha512",
     "C:\\Users\\dadak\\.nuget\\packages\\microsoft.aspnetcore.authentication.jwtbearer\\6.0.7\\microsoft.aspnetcore.authentication.jwtbearer.6.0.7.nupkg.sha512",
     "C:\\Users\\dadak\\.nuget\\packages\\microsoft.aspnetcore.cryptography.internal\\6.0.7\\microsoft.aspnetcore.cryptography.internal.6.0.7.nupkg.sha512",
     "C:\\Users\\dadak\\.nuget\\packages\\microsoft.aspnetcore.cryptography.keyderivation\\6.0.7\\microsoft.aspnetcore.cryptography.keyderivation.6.0.7.nupkg.sha512",
     "C:\\Users\\dadak\\.nuget\\packages\\microsoft.aspnetcore.identity.entityframeworkcore\\6.0.7\\microsoft.aspnetcore.identity.entityframeworkcore.6.0.7.nupkg.sha512",
-    "C:\\Users\\dadak\\.nuget\\packages\\microsoft.csharp\\4.5.0\\microsoft.csharp.4.5.0.nupkg.sha512",
+    "C:\\Users\\dadak\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",
     "C:\\Users\\dadak\\.nuget\\packages\\microsoft.data.sqlclient\\2.1.4\\microsoft.data.sqlclient.2.1.4.nupkg.sha512",
     "C:\\Users\\dadak\\.nuget\\packages\\microsoft.data.sqlclient.sni.runtime\\2.1.1\\microsoft.data.sqlclient.sni.runtime.2.1.1.nupkg.sha512",
     "C:\\Users\\dadak\\.nuget\\packages\\microsoft.entityframeworkcore\\6.0.7\\microsoft.entityframeworkcore.6.0.7.nupkg.sha512",
