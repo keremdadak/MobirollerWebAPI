@@ -1,0 +1,15 @@
+D:\MobirollerCase\Mobiroller\Mobiroller.Core\bin\Debug\net6.0\Mobiroller.Core.deps.json
+D:\MobirollerCase\Mobiroller\Mobiroller.Core\bin\Debug\net6.0\Mobiroller.Core.dll
+D:\MobirollerCase\Mobiroller\Mobiroller.Core\bin\Debug\net6.0\Mobiroller.Core.pdb
+D:\MobirollerCase\Mobiroller\Mobiroller.Core\bin\Debug\net6.0\SharedLibrary.dll
+D:\MobirollerCase\Mobiroller\Mobiroller.Core\bin\Debug\net6.0\SharedLibrary.pdb
+D:\MobirollerCase\Mobiroller\Mobiroller.Core\obj\Debug\net6.0\Mobiroller.Core.csproj.AssemblyReference.cache
+D:\MobirollerCase\Mobiroller\Mobiroller.Core\obj\Debug\net6.0\Mobiroller.Core.GeneratedMSBuildEditorConfig.editorconfig
+D:\MobirollerCase\Mobiroller\Mobiroller.Core\obj\Debug\net6.0\Mobiroller.Core.AssemblyInfoInputs.cache
+D:\MobirollerCase\Mobiroller\Mobiroller.Core\obj\Debug\net6.0\Mobiroller.Core.AssemblyInfo.cs
+D:\MobirollerCase\Mobiroller\Mobiroller.Core\obj\Debug\net6.0\Mobiroller.Core.csproj.CoreCompileInputs.cache
+D:\MobirollerCase\Mobiroller\Mobiroller.Core\obj\Debug\net6.0\Mobiroller.Core.csproj.CopyComplete
+D:\MobirollerCase\Mobiroller\Mobiroller.Core\obj\Debug\net6.0\Mobiroller.Core.dll
+D:\MobirollerCase\Mobiroller\Mobiroller.Core\obj\Debug\net6.0\refint\Mobiroller.Core.dll
+D:\MobirollerCase\Mobiroller\Mobiroller.Core\obj\Debug\net6.0\Mobiroller.Core.pdb
+D:\MobirollerCase\Mobiroller\Mobiroller.Core\obj\Debug\net6.0\ref\Mobiroller.Core.dll

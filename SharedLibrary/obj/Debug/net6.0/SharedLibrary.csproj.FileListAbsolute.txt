@@ -1,0 +1,12 @@
+D:\MobirollerCase\Mobiroller\SharedLibrary\bin\Debug\net6.0\SharedLibrary.deps.json
+D:\MobirollerCase\Mobiroller\SharedLibrary\bin\Debug\net6.0\SharedLibrary.dll
+D:\MobirollerCase\Mobiroller\SharedLibrary\bin\Debug\net6.0\SharedLibrary.pdb
+D:\MobirollerCase\Mobiroller\SharedLibrary\obj\Debug\net6.0\SharedLibrary.csproj.AssemblyReference.cache
+D:\MobirollerCase\Mobiroller\SharedLibrary\obj\Debug\net6.0\SharedLibrary.GeneratedMSBuildEditorConfig.editorconfig
+D:\MobirollerCase\Mobiroller\SharedLibrary\obj\Debug\net6.0\SharedLibrary.AssemblyInfoInputs.cache
+D:\MobirollerCase\Mobiroller\SharedLibrary\obj\Debug\net6.0\SharedLibrary.AssemblyInfo.cs
+D:\MobirollerCase\Mobiroller\SharedLibrary\obj\Debug\net6.0\SharedLibrary.csproj.CoreCompileInputs.cache
+D:\MobirollerCase\Mobiroller\SharedLibrary\obj\Debug\net6.0\SharedLibrary.dll
+D:\MobirollerCase\Mobiroller\SharedLibrary\obj\Debug\net6.0\refint\SharedLibrary.dll
+D:\MobirollerCase\Mobiroller\SharedLibrary\obj\Debug\net6.0\SharedLibrary.pdb
+D:\MobirollerCase\Mobiroller\SharedLibrary\obj\Debug\net6.0\ref\SharedLibrary.dll
