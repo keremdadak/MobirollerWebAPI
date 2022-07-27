@@ -78,3 +78,4 @@ D:\MobirollerCase\Mobiroller\Mobiroller.API\bin\Debug\net6.0\FluentValidation.dl
 D:\MobirollerCase\Mobiroller\Mobiroller.API\bin\Debug\net6.0\FluentValidation.AspNetCore.dll
 D:\MobirollerCase\Mobiroller\Mobiroller.API\bin\Debug\net6.0\FluentValidation.DependencyInjectionExtensions.dll
 D:\MobirollerCase\Mobiroller\Mobiroller.API\bin\Debug\net6.0\Microsoft.AspNetCore.Authentication.OpenIdConnect.dll
+D:\MobirollerCase\Mobiroller\Mobiroller.API\bin\Debug\net6.0\Newtonsoft.Json.dll

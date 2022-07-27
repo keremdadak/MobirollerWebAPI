@@ -1,7 +1,9 @@
 using FluentValidation.AspNetCore;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Localization;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Localization;
 using Mobiroller.Core.Configuration;
 using Mobiroller.Core.Models;
 using Mobiroller.Core.Repository;
@@ -9,12 +11,21 @@ using Mobiroller.Core.Services;
 using Mobiroller.Core.UnitOfWork;
 using Mobiroller.Data;
 using Mobiroller.Data.Repositories;
+using Mobiroller.Service.Localizer;
 using Mobiroller.Service.Services;
 using SharedLibrary.Configurations;
 using SharedLibrary.Extensions;
 using SharedLibrary.Services;
+using System.Globalization;
 
 var builder = WebApplication.CreateBuilder(args);
+
+//Localization
+builder.Services.AddLocalization();
+builder.Services.AddSingleton<LocalizationMiddleware>();
+builder.Services.AddDistributedMemoryCache();
+builder.Services.AddSingleton<IStringLocalizerFactory, JsonStringLocalizerFactory>();
+
 
 
 builder.Services.AddScoped<IAuthenticationService, AuthenticationService>();
@@ -80,7 +91,13 @@ builder.Services.AddControllers().AddFluentValidation(options =>
 builder.Services.UseCustomValidationResponse();
 
 var app = builder.Build();
-
+var options = new RequestLocalizationOptions
+{
+    DefaultRequestCulture = new RequestCulture(new CultureInfo("en-US"))
+};
+app.UseRequestLocalization(options);
+app.UseStaticFiles();
+app.UseMiddleware<LocalizationMiddleware>();
 
 
 // Configure the HTTP request pipeline.
