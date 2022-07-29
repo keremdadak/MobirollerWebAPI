@@ -11,22 +11,15 @@ using Mobiroller.Core.Services;
 using Mobiroller.Core.UnitOfWork;
 using Mobiroller.Data;
 using Mobiroller.Data.Repositories;
-using Mobiroller.Service.Localizer;
+
 using Mobiroller.Service.Services;
 using SharedLibrary.Configurations;
 using SharedLibrary.Extensions;
 using SharedLibrary.Services;
 using System.Globalization;
+using Mobiroller.API;
 
 var builder = WebApplication.CreateBuilder(args);
-
-//Localization
-builder.Services.AddLocalization();
-builder.Services.AddSingleton<LocalizationMiddleware>();
-builder.Services.AddDistributedMemoryCache();
-builder.Services.AddSingleton<IStringLocalizerFactory, JsonStringLocalizerFactory>();
-
-
 
 builder.Services.AddScoped<IAuthenticationService, AuthenticationService>();
 builder.Services.AddScoped<IUserService, UserService>();
@@ -41,6 +34,7 @@ builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
+
 builder.Services.AddDbContext<AppDbContext>(options =>
 {
     options.UseSqlServer(builder.Configuration.GetConnectionString("SqlCon"), sqlOptions =>
@@ -48,7 +42,7 @@ builder.Services.AddDbContext<AppDbContext>(options =>
         sqlOptions.MigrationsAssembly("Mobiroller.Data");
     });
 });
-builder.Services.AddIdentity<AppUser,AppRole>().AddEntityFrameworkStores<AppDbContext>().AddDefaultTokenProviders();
+builder.Services.AddIdentity<AppUser, AppRole>().AddEntityFrameworkStores<AppDbContext>().AddDefaultTokenProviders();
 builder.Services.AddIdentity<AppUser, IdentityRole>(opt =>
 {
     opt.User.RequireUniqueEmail = true;
@@ -90,10 +84,21 @@ builder.Services.AddControllers().AddFluentValidation(options =>
 
 builder.Services.UseCustomValidationResponse();
 
+
+//Localization
+builder.Services.AddLocalization();
+builder.Services.AddSingleton<LocalizationMiddleware>();
+builder.Services.AddDistributedMemoryCache();
+builder.Services.AddSingleton<IStringLocalizerFactory, JsonStringLocalizerFactory>();
+
+
+builder.Services.AddMemoryCache();
+
+
 var app = builder.Build();
 var options = new RequestLocalizationOptions
 {
-    DefaultRequestCulture = new RequestCulture(new CultureInfo("en-US"))
+    DefaultRequestCulture = new RequestCulture(new CultureInfo("tr-TR"))
 };
 app.UseRequestLocalization(options);
 app.UseStaticFiles();

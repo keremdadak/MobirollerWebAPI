@@ -8,12 +8,12 @@ using System.Text;
 using System.Text.Json;
 using System.Threading.Tasks;
 
-namespace Mobiroller.Service.Localizer
+namespace Mobiroller.API
 {
     public class JsonStringLocalizer : IStringLocalizer
     {
         private readonly IDistributedCache _cache;
-        private readonly Newtonsoft.Json.JsonSerializer _serializer = new Newtonsoft.Json.JsonSerializer();
+        private readonly Newtonsoft.Json.JsonSerializer _serializer = new();
 
         public JsonStringLocalizer(IDistributedCache cache)
         {

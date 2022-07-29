@@ -6,7 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Mobiroller.Service.Localizer
+namespace Mobiroller.API
 {
     public class LocalizationMiddleware : IMiddleware
     {

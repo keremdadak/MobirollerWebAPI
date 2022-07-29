@@ -79,3 +79,5 @@ D:\MobirollerCase\Mobiroller\Mobiroller.API\bin\Debug\net6.0\FluentValidation.As
 D:\MobirollerCase\Mobiroller\Mobiroller.API\bin\Debug\net6.0\FluentValidation.DependencyInjectionExtensions.dll
 D:\MobirollerCase\Mobiroller\Mobiroller.API\bin\Debug\net6.0\Microsoft.AspNetCore.Authentication.OpenIdConnect.dll
 D:\MobirollerCase\Mobiroller\Mobiroller.API\bin\Debug\net6.0\Newtonsoft.Json.dll
+D:\MobirollerCase\Mobiroller\Mobiroller.API\bin\Debug\net6.0\Resources\it-IT.json
+D:\MobirollerCase\Mobiroller\Mobiroller.API\bin\Debug\net6.0\Resources\tr-TR.json
