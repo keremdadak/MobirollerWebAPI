@@ -7,9 +7,8 @@ namespace Mobiroller.API.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class ProductController : Controller
+    public class ProductController : CustomBaseController
     {
-
         private readonly IMemoryCache _memoryCache;
 
         public ProductController(IMemoryCache memoryCache)
@@ -35,7 +34,6 @@ namespace Mobiroller.API.Controllers
             
             return productList;
         }
-
 
 
     }
